@@ -118,5 +118,3 @@ Stop it by
 ```bash
 docker compose down
 ```
-
-NOTE: docker files for production have not been test. I will do it as soon as possible.

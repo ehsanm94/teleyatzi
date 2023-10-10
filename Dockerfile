@@ -1,20 +1,11 @@
-FROM node:alpine3.18 AS builder
+FROM node:alpine3.18
 
-RUN apk add python make g++
+WORKDIR /home/node
 
-WORKDIR /app
 COPY package* ./
 
 ENV NPM_CONFIG_LOGLEVEL info
 RUN npm install --production
-
-FROM node:alpine3.18
-
-USER node
-
-WORKDIR /home/node
-
-COPY --from=builder /app .
 
 COPY . .
 
