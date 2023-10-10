@@ -195,12 +195,12 @@ function initGameTable () {
     let lowerSectionHTML = '';
     Object.keys(rules).forEach(function (ruleKey) {
         if (rules[ruleKey].side === 'upper') {
-            upperSectionHTML += '<div class="row game-item"><div class="col-4" id="rule-description-' + ruleKey + '"><img src="images/' + rules[ruleKey].dice + '.svg"></div> <div class="col-8" id="' + ruleKey + '">  </div></div>';
+            upperSectionHTML += '<div class="row justify-content-evenly game-item"><div class="col-4" id="rule-description-' + ruleKey + '"><img src="images/' + rules[ruleKey].dice + '.svg"></div> <div class="col-4" id="' + ruleKey + '">  </div></div>';
         } else {
-            lowerSectionHTML += '<div class="row game-item"><div class="col-4" id="rule-description-' + ruleKey + '"><img src="images/' + rules[ruleKey].dice + '.svg"></div> <div class="col-8" id="' + ruleKey + '">  </div></div>';
+            lowerSectionHTML += '<div class="row justify-content-evenly game-item"><div class="col-4" id="rule-description-' + ruleKey + '"><img src="images/' + rules[ruleKey].dice + '.svg"></div> <div class="col-4" id="' + ruleKey + '">  </div></div>';
         }
     });
-    upperSectionHTML += '<div class="row game-item last-item"><div class="col-4" id="rule-description-upperSectionBonus"><img src="images/dice_upperSectionBonus.svg"></div><div class="col-8" id="gift"><svg width="48" height="48" viewBox="0 0 160 160" class="progress-svg"><circle r="70" cx="80" cy="80" fill="transparent" stroke="#e0e0e0" stroke-width="12px"></circle><circle id="progress" r="70" cx="80" cy="80" fill="transparent" stroke="#198754" stroke-linecap="round" stroke-width="12px" stroke-dasharray="439.6px" stroke-dashoffset="1px"></circle></svg><span id="bounce"></span></div></div>';
+    upperSectionHTML += '<div class="row justify-content-evenly game-item last-item"><div class="col-4" id="rule-description-upperSectionBonus"><img src="images/dice_upperSectionBonus.svg"></div><div class="col-4" id="gift"><svg width="48" height="48" viewBox="0 0 160 160" class="progress-svg"><circle r="70" cx="80" cy="80" fill="transparent" stroke="#e0e0e0" stroke-width="12px"></circle><circle id="progress" r="70" cx="80" cy="80" fill="transparent" stroke="#198754" stroke-linecap="round" stroke-width="12px" stroke-dasharray="439.6px" stroke-dashoffset="1px"></circle></svg><span id="bounce"></span></div></div>';
 
     $('#upper-section').html(upperSectionHTML);
     $('#lower-section').html(lowerSectionHTML);
@@ -360,9 +360,9 @@ function setupGame (data, rolling) {
 function prosessRulesTable (rules) {
     Object.keys(rules).forEach(function (ruleKey) {
         if (rules[ruleKey].filled) {
-            $(`#${ruleKey}`).html('<button class="btn btn-outline-success" >' + rules[ruleKey].score + '</button>');
+            $(`#${ruleKey}`).html('<button class="btn btn-light">' + rules[ruleKey].score + '</button>');
         } else {
-            $(`#${ruleKey}`).html('<button class="btn btn-success" id="play' + ruleKey + '" >' + rules[ruleKey].playableScore + '</button>');
+            $(`#${ruleKey}`).html('<button class="btn btn-primary" id="play' + ruleKey + '" >' + rules[ruleKey].playableScore + '</button>');
             $('#play' + ruleKey).click(function () { playGame(ruleKey); });
         }
     });

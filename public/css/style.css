@@ -90,3 +90,6 @@ a{
 #modal-btn button{
     margin: auto;
 }
+.btn-primary{
+    background-color: var(--tg-theme-button-color, #50a8eb);
+}
