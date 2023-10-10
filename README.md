@@ -107,7 +107,7 @@ npm test
 
 ### Deployment
 
-Clone the repo, move to project root and run 
+Clone the repo, set the environment variables, move to project root and run 
 
 ```bash
 docker compose up -d
