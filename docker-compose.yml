@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    restart: always
+    env_file: .env
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  redis:
+    image: redis:alpine3.18
+    restart: always
+    command: ["redis-server", "--appendonly", "yes"]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:

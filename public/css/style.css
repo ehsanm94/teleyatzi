@@ -1,0 +1,92 @@
+body{
+    font-family: "Roboto", sans-serif;
+    overflow-x:hidden;
+}
+.container{
+    max-width: 600px;
+}
+.logo{
+    text-align: center;
+    margin: 10px;
+    font-family: "Young Serif", sans-serif;
+}
+#handle-game{
+    width: 100%;
+    margin: 4px;
+}
+a{
+    text-decoration: none;
+}
+.user-name{
+    display: block;
+    padding: 5px;
+    border-radius: 9px;
+    text-align: center;
+}
+.game-item{
+    margin: 5px 0 6px 0;
+    padding: 3px;
+    border-bottom: 1px dashed var(--bs-blue);
+}
+.right-col{border-left: 1px dashed var( --bs-blue );}
+.last-item{ border: none }
+.roll{
+    padding: 7px 29px;
+    margin: auto;
+    margin-top: 15px;
+}
+.bottom-nav{
+
+    margin-bottom: 10px;
+}
+.dice-rolling{
+    cursor: pointer;
+}
+.dice-rolling img{
+    width: 50px;
+}
+.game-item img{
+    width: 50px;
+}
+.lock img{
+    background-color: #ddd;
+    padding: 4px;
+}
+.lock::after {
+    content: url('../images/lock.png');
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-left: -2px;
+    margin-top: -21px;
+}
+.playable{
+    font-size: 27px;
+    cursor: pointer;
+    border: 4px solid #fd7e14;
+    padding: 0px 13px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #fd7e14;
+}
+.filled{
+
+    font-size: 28px;
+    font-style: italic;
+}
+.game-item .btn{
+    margin: 5px;
+}
+.progress-svg{
+    transform: rotate(-90deg)
+}
+#game{
+    display: none;
+}
+.main-img{
+    border-radius: 10px;
+    max-width: 100%;
+}
+#modal-btn button{
+    margin: auto;
+}
