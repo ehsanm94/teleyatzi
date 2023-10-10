@@ -12,7 +12,7 @@ This Repository houses a fully functional [Telegram Mini APP](https://core.teleg
 - [Deployment](#deployment)
 
 ### Overview
-With Mini Apps developers can use JavaScript to create infinitely flexible interfaces that can be launched right inside Telegram — and can completely replace any website. [read more >>](#https://core.telegram.org/bots/webapps)
+With Mini Apps developers can use JavaScript to create infinitely flexible interfaces that can be launched right inside Telegram — and can completely replace any website. [read more >>](https://core.telegram.org/bots/webapps)
 
 In this repository we are going to implement a simple but functional Telegram Mini App to play [Yatzy](https://en.wikipedia.org/wiki/Yatzy).
 
