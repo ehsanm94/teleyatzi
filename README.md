@@ -107,7 +107,7 @@ npm test
 
 ### Deployment
 
-Clone the repo, set the environment variables, move to project root and run 
+Run it By (installing dependencies)[#install-dependencies] or just Clone the repo, set the environment variables, move to project root and run 
 
 ```bash
 docker compose up -d
@@ -118,3 +118,5 @@ Stop it by
 ```bash
 docker compose down
 ```
+
+NOTE: docker files for production have not been test. I will do it as soon as possible.
