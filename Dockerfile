@@ -10,16 +10,13 @@ RUN npm install --production
 
 FROM node:alpine3.18
 
-RUN addgroup -g 1000 node \
-    && adduser -u 1000 -G node -s /bin/sh -D node
-
 USER node
 
 WORKDIR /home/node
 
-COPY --chown=node:node --from=builder /app .
+COPY --from=builder /app .
 
-COPY --chown=node:node . .
+COPY . .
 
 EXPOSE 8080 8080
 
