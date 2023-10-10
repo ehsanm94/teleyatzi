@@ -93,7 +93,7 @@ class ScoreCard {
     toResponse (dices = []) {
         const scoringRules = {};
         for (const ruleName in this.rules) {
-            scoringRules[ruleName] = this.rules[ruleName].toJsonWithPlayableScore(dices);
+            scoringRules[ruleName] = this.rules[ruleName].toJsonWithPlayableScore([...dices]);
         }
 
         return {
